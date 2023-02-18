@@ -8,8 +8,7 @@
 - [Features](#Features)
 - [Bootsrap Components Used](#Bootsrap_Components_Used)
 - [FileStructure](#file-structure)
-- [Guidelines]
-- [Credit/Acknowledgement]
+
 -----------------------------------------------------------------------------------------------------------------
 
 ## Team_Members
