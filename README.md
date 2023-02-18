@@ -43,5 +43,5 @@ The proposed plan is to create a website that offers a diverse range of games fo
 4. Bootstrap Popover:
 5. Bootstrap Button:
 6. Bootstrap Modal:
-7. Bootstrap Accordion:
-6. 
+7. Bootstrap Accordion: In schedule section of the website ,the first bootstrap component used is accordion. Used accordion to display all the games in three different categories with description.
+
