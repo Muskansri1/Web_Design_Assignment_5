@@ -27,8 +27,25 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <script type="text/javascript">
+    $(function () {
+        $("#LaunchBtn").click(function () {
+            $("#exampleModal").dialog({
+                modal: true,
+                title: "jQuery Dialog",
+               width: 300,
+                height: 150,
+                open: function (event, ui) {
+                    setTimeout(function () {
+                        $("#dialog").dialog("close");
+                    }, 3000);
+                }
+            });
+        });
+    });
+</script>
 
-</head>
+</head data-spy="scroll" data-target="navbar">
 
 <body>
 
@@ -42,36 +59,28 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li class="dropdown"><a class="nav-link scrollto active" href="#hero"><span>Home</span><i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <!-- <div class="alert alert-secondary" role="alert">
+              You'll be navigated to a new page.
+              <li><a class="nav-link scrollto" href="https://www.youtube.com/watch?v=ehyRO_YygEw" target="_blank">Video</a></li>
+            </div> -->
+            <li><a class="nav-link scrollto" href="https://www.youtube.com/watch?v=ehyRO_YygEw" target="_blank">Video</a></li>  
+          </ul>
+        </li>
+          <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
           <li><a class="nav-link scrollto" href="#TeamMembers">Team Members</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-          <li><a class="nav-link scrollto" href="#venue">Venue</a></li>
           <li><a class="nav-link scrollto" href="#games">Games</a></li>
           <li><a class="nav-link scrollto" href="#techStack">Tech Stack</a></li>
           <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul>
-        </li> -->
+  
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a class="buy-tickets scrollto" href="#buy-tickets">Buy Tickets</a>
+      <a class="buy-tickets scrollto" href="#buy-tickets" onclick = "window.location.href='signup.html';">Sign Up</a>
 
     </div>
   </header><!-- End Header -->
@@ -80,10 +89,11 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1 class="mb-4 pb-0">All About<br><span>Gaming</span> Arcade</h1>
-      <a href="https://www.youtube.com/watch?v=ehyRO_YygEw" class="glightbox play-btn mb-4"></a>
+      <a href="https://www.youtube.com/watch?v=ehyRO_YygEw" class="glightbox play-btn mb-4" data-toggle="popover" title="Let Us Talk Gaming Commercial"></a>
       <a href="#about" class="about-btn scrollto">Gist of the Project</a>
     </div>
-  </section><!-- End Hero Section -->
+  </section>
+  <!-- End Hero Section -->
 
   <main id="main">
 
@@ -97,6 +107,31 @@
               The Arcade features 10+ Games like Tic-Tac-Toe, Snake and Fruit, Minesweeper etc. It has features like
               Leaderboard, favourite games, etc.
             </p>
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-bs-target="#StayTuned">Launch Date</button>
+
+            <div class="modal fade" id="StayTuned" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  Stay Tuned!
+                </div>
+              </div>
+            </div> -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" id="LaunchBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch Date</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  style="display: none">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <button type="button" class="btn-close" id="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div class="modal-body" style="background-color: red;">
+                    Stay Tuned! We are working on the Project.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
           <div class="col-lg-3">
             <h3>TEAM NAME</h3>
@@ -138,7 +173,7 @@
             <div class="TeamMem" data-aos="fade-up" data-aos-delay="200">
               <img src="assets/img/speakers/Shreya.jpeg" alt="Speaker 2" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Shreya</a></h3>
+                <h3><a href="https://singular-pasca-56e940.netlify.app">Shreya</a></h3>
                 <p>Software Developer</p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -151,10 +186,10 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="TeamMem" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
+              <img src="assets/img/speakers/Riddhi.jpeg" alt="Speaker 3" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Cole Emmerich</a></h3>
-                <p>Fugiat laborum et</p>
+                <h3><a href="#">Riddhi</a></h3>
+                <p>Full Stack Developer</p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -166,10 +201,10 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="TeamMem" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+              <img src="assets/img/speakers/Krishna.jpeg" alt="Speaker 4" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
-                <p>Debitis iure vero</p>
+                <h3><a href="https://majestic-souffle-57bfdb.netlify.app">Krishna</a></h3>
+                <p>Software Developer</p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -181,10 +216,16 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="TeamMem" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
+              <img src="assets/img/speakers/team.png " alt="Speaker 5" class="img-fluid">
+          
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="TeamMem" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/speakers/Richa.jpeg" alt="Speaker 5" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
-                <p>Qui molestiae natus</p>
+                <h3><a href="https://portfolio-production-ea13.up.railway.app/">Richa Jain</a></h3>
+                <p>Software Developer</p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -194,52 +235,79 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="TeamMem" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Willow Trantow</a></h3>
-                <p>Non autem dicta</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
+         
           </div>
         </div>
       </div>
 
-    </section><!-- End Speakers Section -->
+    </section>
+    <br>
+    <!-- End Speakers Section -->
 
     <!-- ======= Schedule Section ======= -->
     <section id="schedule" class="section-with-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Event Schedule</h2>
-          <p>Here is our event schedule</p>
+          <p>Here is our Games event schedule</p>
         </div>
 
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                BRAIN TEASER
+              </button> 
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Our website's games are categorized into three categories. BRAIN TEASER is the first category. Example, a puzzle that requires thought to solve is referred to as a brainteaser. It frequently calls for unconventional thinking while keeping the constraints in mind, and it occasionally also calls for lateral thinking. Riddles and logic puzzles fall under the category of "brain teasers."
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                RACING GAMES
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Racing games make up the second section. The goal of this game is to avoid the obstacles on the tracks and make it to the finish line as quickly as you can while surviving as long as you can. We use a currently available car racing game, which is depicted in the following image, to demonstrate what we ultimately want to achieve.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                SPORTS GAMES
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">SPORTS GAMES make up the third section.
+                Some of the most well-known video games available right now are sports games. A "traditional" or "real world" sport, such as football, basketball, American football, tennis, etc., is attempted to be simulated in these video games.
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
         <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">Brain Teaser</a>
+            <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">BRAIN TEASER</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Racing Games</a>
+            <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">RACING GAMES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">Sports Games</a>
+            <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">SPORTS GAMES</a>
           </li>
         </ul>
 
-        <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
-          necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+
+        <h3 class="sub-heading">WELCOME!<br> You are at the right place for playing all kinds of amazing games.
+        </h3>
+
+
 
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
-          <!-- Schdule Day 1 -->
+          <!-- Schdule Brain Teaser -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
 
             <div class="row schedule-item">
@@ -322,9 +390,9 @@
             </div>
 
           </div>
-          <!-- End Schdule Day 1 -->
+          <!-- End Brain teaser -->
 
-          <!-- Schdule Day 2 -->
+          <!-- Schdule Racing games -->
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
 
             <div class="row schedule-item">
@@ -343,10 +411,10 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="assets/img/speakers/5.jpg" alt="Hubert Hirthe">
                 </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                <h4>Sports Bike Racing </h4>
+                <p>This game will put your speed, control, patience, accuracy, precision, and, of course, driving skills to the test while having a blast. </p>
               </div>
             </div>
 
@@ -354,10 +422,10 @@
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/3.jpg" alt="Cole Emmerich">
+                  <img src="assets/img/speakers/10.jpg" alt="Cole Emmerich">
                 </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+                <h4>Island Race</h4>
+                <p>Island Racer features the unique ability to generate new original landscapes and tracks, offering infinite track combinations for a new experience with every race.</p>
               </div>
             </div>
 
@@ -365,10 +433,10 @@
               <div class="col-md-2"><time>02:00 PM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/4.jpg" alt="Jack Christiansen">
+                  <img src="assets/img/speakers/11.jpg" alt="Jack Christiansen">
                 </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                <h4> F1 RACE </h4>
+                <p>The game features racing in one of two Formula One cars on a variety of tracks in landmark scenery.</p>
               </div>
             </div>
 
@@ -376,38 +444,28 @@
               <div class="col-md-2"><time>03:00 PM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/5.jpg" alt="Alejandrin Littel">
+                  <img src="assets/img/speakers/12.jpg" alt="Alejandrin Littel">
                 </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+                <h4>BMX BIKE GAME </h4>
+                <p>Grab your bike, strap on your helmet, jump over obstacles, climb ropes and walls, and beat the clock on amazing off road circuits.</p>
               </div>
             </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="TeamMem">
-                  <img src="assets/img/speakers/6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-              </div>
-            </div>
 
           </div>
-          <!-- End Schdule Day 2 -->
+          <!-- End Racing games -->
 
-          <!-- Schdule Day 3 -->
+          <!-- Schdule Sports games -->
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="assets/img/speakers/13.jpg" alt="Hubert Hirthe">
                 </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                <h4>FIFA MOBILE </h4>
+                <p>FIFA Mobile is an association football simulation video game developed by EA Mobile and EA Canada and published by EA Sports for iOS and Android.</p>
               </div>
             </div>
 
@@ -415,10 +473,10 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/3.jpg" alt="Cole Emmerich">
+                  <img src="assets/img/speakers/14.jpg" alt="Cole Emmerich">
                 </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+                <h4>BASKET BALL </h4>
+                <p>Basketball is a sport where two teams compete to score the most points, with the objective of shooting a ball into a hoop to gain points.</p>
               </div>
             </div>
 
@@ -426,10 +484,10 @@
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="assets/img/speakers/15.jpg" alt="Brenden Legros">
                 </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
+                <h4>HOCKEY </h4>
+                <p>Hockey is a game played on ice between two teams of 11 players who use long curved sticks to hit a small rubber disk, called a puck, and try to score goals.</p>
               </div>
             </div>
 
@@ -437,10 +495,10 @@
               <div class="col-md-2"><time>02:00 PM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/4.jpg" alt="Jack Christiansen">
+                  <img src="assets/img/speakers/16.jpg" alt="Jack Christiansen">
                 </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                <h4>BOXING </h4>
+                <p>Boxers use hand and wrist wraps and boxing gloves to reduce the risks of injuries to their hands.</p>
               </div>
             </div>
 
@@ -448,26 +506,15 @@
               <div class="col-md-2"><time>03:00 PM</time></div>
               <div class="col-md-10">
                 <div class="TeamMem">
-                  <img src="assets/img/speakers/5.jpg" alt="Alejandrin Littel">
+                  <img src="assets/img/speakers/17.jpg" alt="Alejandrin Littel">
                 </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="TeamMem">
-                  <img src="assets/img/speakers/6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+                <h4> CRICKET </h4>
+                <p> Cricket is a game of strategy between two teams. Each team bats and fields in turn – the batters try to score runs; the fielders try to stop them.</p>
               </div>
             </div>
 
           </div>
-          <!-- End Schdule Day 2 -->
+          <!-- End Sports games -->
 
         </div>
 
@@ -475,108 +522,7 @@
 
     </section><!-- End Schedule Section -->
 
-    <!-- ======= Venue Section ======= -->
-    <section id="venue">
-
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Event Venue</h2>
-          <p>Event venue location info and gallery</p>
-        </div>
-
-        <div class="row g-0">
-          <div class="col-lg-6 venue-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-              frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-
-          <div class="col-lg-6 venue-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8 position-relative">
-                <h3>Downtown Conference Center, New York</h3>
-                <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit
-                  qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim
-                  nesciunt quia velit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="container-fluid venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-0">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/1.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/2.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/3.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/4.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/5.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/6.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/7.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/8.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section><!-- End Venue Section -->
+   
 
     <!-- ======= Games Section ======= -->
     <section id="games" class="section-with-bg">
@@ -853,15 +799,15 @@
     <section id="subscribe">
       <div class="container" data-aos="zoom-in">
         <div class="section-header">
-          <h2>Newsletter</h2>
-          <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
+          <h2>Sign Up</h2>
+          <p>We're Still Cooking. But you can be a Beta User and Get Access To our newest Features</p>
         </div>
 
         <form method="POST" action="#">
           <div class="row justify-content-center">
             <div class="col-lg-6 col-md-10 d-flex">
               <input type="text" class="form-control" placeholder="Enter your Email">
-              <button type="submit" class="ms-2">Subscribe</button>
+              <button type="submit">Subscribe</button>
             </div>
           </div>
         </form>
@@ -993,7 +939,7 @@
 
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Nihil officia ut sint molestiae tenetur.</p>
+          <p>We always love hearing from you</p>
         </div>
 
         <div class="row contact-info">
@@ -1002,7 +948,7 @@
             <div class="contact-address">
               <i class="bi bi-geo-alt"></i>
               <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <address>75 Saint Alphonsus Street, Boston, MA, USA</address>
             </div>
           </div>
 
@@ -1010,7 +956,7 @@
             <div class="contact-phone">
               <i class="bi bi-phone"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <p><a href="tel:+155895548855">+1 6177498970</a></p>
             </div>
           </div>
 
@@ -1018,34 +964,36 @@
             <div class="contact-email">
               <i class="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:info@example.com">sisodiya.s@northeastern.edu</a></p>
             </div>
           </div>
 
         </div>
 
         <div class="form">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <input type="text" name="name" class="form-control" id="nameForm" placeholder="Your Name" required>
               </div>
               <div class="form-group col-md-6 mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <input type="email" class="form-control" name="email" id="emailForm" placeholder="Your Email" required>
               </div>
             </div>
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              <input type="text" class="form-control" name="subject" id="subjectForm" placeholder="Subject" required>
             </div>
             <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              <textarea class="form-control" name="message" rows="5" placeholder="MessageForm" required></textarea>
             </div>
-            <div class="my-3">
+            <!-- <div class="my-3">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            </div> -->
+            <br>
+
+            <div  class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>
 
@@ -1062,11 +1010,20 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <img src="assets/img/logo1.png" alt="TheEvenet">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro.
-              Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore
-              consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
           </div>
 
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div> -->
+<!-- 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
@@ -1076,36 +1033,25 @@
               <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
+          </div> -->
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
+              75 Saint Alphonsus Street <br>
+              Boston, MA<br>
               United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Phone:</strong> +1 6177498970<br>
+              <strong>Email:</strong> sisodiya.s@northeastern.edu<br>
             </p>
 
-            <div class="social-links">
+            <!-- <div class="social-links">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
               <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
               <a href="#" class="google-plus"><i class="bi bi-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
+            </div> -->
 
           </div>
 
@@ -1115,12 +1061,12 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+        &copy; Copyright <strong>Let's Talk Games</strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <!-- <div class="credits">
 
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      </div> -->
     </div>
   </footer><!-- End  Footer -->
 
@@ -1136,6 +1082,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- <script>
+    $('#closemodal').click(function() {
+    $('#exampleModal').modal('hide');
+});
+  </script> -->
 
 </body>
 
