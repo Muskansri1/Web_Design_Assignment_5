@@ -1,5 +1,4 @@
-# Let's Talk Games
-
+# Let's Talk Games ![Image_Banner!](https://github.com/Muskansri1/Web_Design_Assignment_5/blob/main/Let's_Talk_Games/assets/img/favicon.png)
 
 ## Index
 
