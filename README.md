@@ -29,4 +29,11 @@ The proposed plan is to create a website that offers a diverse range of games fo
 
 ## Bootsrap Components Used
 
-1. Bootstrap Navbar
+1. Bootstrap Navbar: 
+2. Bootstrap Dropdown:
+3. Bootstrap Scrollspy:
+4. Bootstrap Popover:
+5. Bootstrap Button:
+6. Bootstrap Modal:
+7. Bootstrap Accordion:
+6. 

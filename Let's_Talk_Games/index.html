@@ -25,9 +25,25 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script type="text/javascript">
+    $(function () {
+        $("#LaunchBtn").click(function () {
+            $("#exampleModal").dialog({
+                modal: true,
+                title: "jQuery Dialog",
+               width: 300,
+                height: 150,
+                open: function (event, ui) {
+                    setTimeout(function () {
+                        $("#dialog").dialog("close");
+                    }, 3000);
+                }
+            });
+        });
+    });
+</script>
 
-
-</head>
+</head data-spy="scroll" data-target="navbar">
 
 <body>
 
@@ -41,31 +57,23 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li class="dropdown"><a class="nav-link scrollto active" href="#hero"><span>Home</span><i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <!-- <div class="alert alert-secondary" role="alert">
+              You'll be navigated to a new page.
+              <li><a class="nav-link scrollto" href="https://www.youtube.com/watch?v=ehyRO_YygEw" target="_blank">Video</a></li>
+            </div> -->
+            <li><a class="nav-link scrollto" href="https://www.youtube.com/watch?v=ehyRO_YygEw" target="_blank">Video</a></li>  
+          </ul>
+        </li>
+          <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
           <li><a class="nav-link scrollto" href="#TeamMembers">Team Members</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#venue">Venue</a></li> -->
           <li><a class="nav-link scrollto" href="#games">Games</a></li>
           <li><a class="nav-link scrollto" href="#techStack">Tech Stack</a></li>
           <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul>
-        </li> -->
+  
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -79,10 +87,11 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1 class="mb-4 pb-0">All About<br><span>Gaming</span> Arcade</h1>
-      <a href="https://www.youtube.com/watch?v=ehyRO_YygEw" class="glightbox play-btn mb-4"></a>
+      <a href="https://www.youtube.com/watch?v=ehyRO_YygEw" class="glightbox play-btn mb-4" data-toggle="popover" title="Let Us Talk Gaming Commercial"></a>
       <a href="#about" class="about-btn scrollto">Gist of the Project</a>
     </div>
-  </section><!-- End Hero Section -->
+  </section>
+  <!-- End Hero Section -->
 
   <main id="main">
 
@@ -95,6 +104,31 @@
             <p>This Project utilizes tech stacks like HTML, CSS, Bootstrap, ExpressJS, Javascript, MongoDB.
               The Arcade features 10+ Games like Tic-Tac-Toe, Snake and Fruit, Minesweeper etc. It has features like Leaderboard, favourite games, etc.
             </p>
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-bs-target="#StayTuned">Launch Date</button>
+
+            <div class="modal fade" id="StayTuned" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  Stay Tuned!
+                </div>
+              </div>
+            </div> -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" id="LaunchBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch Date</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  style="display: none">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <button type="button" class="btn-close" id="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div class="modal-body" style="background-color: red;">
+                    Stay Tuned! We are working on the Project.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
           <div class="col-lg-3">
             <h3>TEAM NAME</h3>
@@ -180,16 +214,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="TeamMem" data-aos="fade-up" data-aos-delay="200">
               <img src="assets/img/speakers/team.png " alt="Speaker 5" class="img-fluid">
-              <!-- <div class="details"> -->
-                <!-- <h3><a href="https://portfolio-production-ea13.up.railway.app/">Richa Jain</a></h3> -->
-                <!-- <p>Software Developer</p> -->
-                <!-- <div class="social"> -->
-                  <!-- <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a> -->
-                <!-- </div> -->
-              <!-- </div> -->
+          
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
@@ -1008,6 +1033,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- <script>
+    $('#closemodal').click(function() {
+    $('#exampleModal').modal('hide');
+});
+  </script> -->
 
 </body>
 
