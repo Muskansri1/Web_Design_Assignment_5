@@ -12,8 +12,8 @@
 ## Team_Members
 
 1. Muskan Srivastava    (srivastava.mu@northeastern.edu)
-2. Richa    ()
-3. Riddhi     ()
+2. Richa Jain()
+3. Riddhi Vora(vora.ri@northeastern.edu)
 4. Shreya Sisodiya(sisodiya.s@northeastern.edu)
 5. Krishnna Sarrdah(sarrdah.k@northeastern.edu)
 
