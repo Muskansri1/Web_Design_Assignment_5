@@ -37,8 +37,7 @@ The proposed plan is to create a website that offers a diverse range of games fo
 ## Bootsrap_Components_Used
 
 1. Bootstrap Navbar: a component of the Bootstrap framework which provides a responsive and customizable navigation menu that can be used on websites and web applications. The Bootstrap Navbar is a common feature on modern websites, and it is designed to be user-friendly and easy to navigate, with dropdown menus, links, buttons, and more.
-2. Bootstrap Dropdown: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
-- The Dropdown has been used in the Navbar for the About and Video section since both the sections come under the Landing section.
+2. Bootstrap Dropdown: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin. The Dropdown has been used in the Navbar for the About and Video section since both the sections come under the Landing section.
 3. Bootstrap Scrollspy: Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 4. Bootstrap Popover: Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
 5. Bootstrap Button: Used in Submit button of the sign-up form. 
