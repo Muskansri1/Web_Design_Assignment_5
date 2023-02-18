@@ -3,16 +3,16 @@
 
 ## Index
 
-- [Team Members](#TeamMembers)
-- [Project Description](#ProjectDescription)
-- [Screenshots](#Screenshots)
-- [Usage](#usage)
+- [Team Members](#Team_Members)
+- [Project Description](#Project_Description)
+- [Features](#Features)
+- [Bootsrap Components Used](#Bootsrap_Components_Used)
 - [FileStructure](#file-structure)
 - [Guidelines]
 - [Credit/Acknowledgement]
 -----------------------------------------------------------------------------------------------------------------
 
-## TeamMembers
+## Team_Members
 
 1. Muskan Srivastava    (srivastava.mu@northeastern.edu)
 2. Richa    ()
@@ -22,7 +22,7 @@
 
 -----------------------------------------------------------------------------------------------------------------
 
-## Project Description
+## Project_Description
 
 The proposed plan is to create a website that offers a diverse range of games for users to enjoy, with the flexibility to choose games that suit their preferences. A mandatory sign-up and login process will allow access to the games and enable us to save users' game scores and maintain a leaderboard that showcases the top performers. Users will also have the option to m view their recently played games for reference. Overall, the website promises to be a one-stop platform for gamers seeking a variety of options to choose from.
 
@@ -37,7 +37,7 @@ The proposed plan is to create a website that offers a diverse range of games fo
 5. Favourites
 6. Recently viewed
 
-## Bootsrap Components Used
+## Bootsrap_Components_Used
 
 1. Bootstrap Navbar: 
 2. Bootstrap Dropdown: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
