@@ -47,4 +47,4 @@ The proposed plan is to create a website that offers a diverse range of games fo
 9. Bootstrap Footers: Contact information and copyright markup are used in the footer.
 10. Bootstrap Grid: Bootstrap's grid system allows up to 12 columns across the page. Used to dispaly games into different sections. Here it is used in Games section.  
 11. Bootstrap Carousel: A slideshow component for cycling through elements—images or slides of text—like a carousel.
-
+12. Bootstrap Progress: custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
