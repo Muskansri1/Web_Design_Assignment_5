@@ -12,7 +12,7 @@
 ## Team_Members
 
 1. Muskan Srivastava (srivastava.mu@northeastern.edu)
-2. Richa Jain ()
+2. Richa Jain (jain.ric@northeastern.edu)
 3. Riddhi Vora (vora.ri@northeastern.edu)
 4. Shreya Sisodiya (sisodiya.s@northeastern.edu)
 5. Krishnna Sarrdah (sarrdah.k@northeastern.edu)
@@ -46,4 +46,4 @@ The proposed plan is to create a website that offers a diverse range of games fo
 7. Bootstrap Accordion: In schedule section of the website, the first bootstrap component used is accordion. Used accordion to display all the games in three different categories with description.
 8. Bootstrap Form: Used in Sign-up form.
 9. Bootstrap Footers: Contact information and copyright markup are used in the footer.
-10.  
+10. Bootstrap Grid: Bootstrap's grid system allows up to 12 columns across the page. Used to dispaly games into different sections. Here it is used in Games section.  
