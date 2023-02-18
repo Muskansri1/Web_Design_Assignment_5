@@ -30,7 +30,8 @@ The proposed plan is to create a website that offers a diverse range of games fo
 ## Bootsrap Components Used
 
 1. Bootstrap Navbar: 
-2. Bootstrap Dropdown:
+2. Bootstrap Dropdown: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
+- The Dropdown has been used in the Navbar for the About and Video section since both the sections come under the Landing section.
 3. Bootstrap Scrollspy:
 4. Bootstrap Popover:
 5. Bootstrap Button:
