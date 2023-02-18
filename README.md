@@ -7,7 +7,6 @@
 - [Project Description](#Project_Description)
 - [Features](#Features)
 - [Bootsrap Components Used](#Bootsrap_Components_Used)
-- [FileStructure](#file-structure)
 
 -----------------------------------------------------------------------------------------------------------------
 
