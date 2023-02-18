@@ -1,5 +1,3 @@
-
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1062,19 +1060,19 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Sponsors Section
+# Features Section
 --------------------------------------------------------------*/
-#supporters {
+#features {
   padding: 60px 0;
 }
 
-#supporters .supporters-wrap {
+#features .features-wrap {
   border-top: 1px solid #e0e5fa;
   border-left: 1px solid #e0e5fa;
   margin-bottom: 30px;
 }
 
-#supporters .supporter-logo {
+#features .features-logo {
   padding: 30px;
   display: flex;
   justify-content: center;
@@ -1086,11 +1084,11 @@ h6 {
   height: 160px;
 }
 
-#supporters .supporter-logo:hover img {
+#features .features-logo:hover img {
   transform: scale(1.2);
 }
 
-#supporters img {
+#features img {
   transition: all 0.4s ease-in-out;
 }
 
