@@ -41,7 +41,9 @@ The proposed plan is to create a website that offers a diverse range of games fo
 - The Dropdown has been used in the Navbar for the About and Video section since both the sections come under the Landing section.
 3. Bootstrap Scrollspy:
 4. Bootstrap Popover:
-5. Bootstrap Button:
+5. Bootstrap Button: Used in Submit button of the sign-up form. 
 6. Bootstrap Modal:
-7. Bootstrap Accordion: In schedule section of the website ,the first bootstrap component used is accordion. Used accordion to display all the games in three different categories with description.
-
+7. Bootstrap Accordion: In schedule section of the website, the first bootstrap component used is accordion. Used accordion to display all the games in three different categories with description.
+8. Bootstrap Form: Used in Sign-up form.
+9. Bootstrap Footers: Contact information and copyright markup are used in the footer.
+10.  
