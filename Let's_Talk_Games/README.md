@@ -1,6 +1,0 @@
-# Introduction
-
-
-## Requirements
-
-## Credit/Acknowledgment
