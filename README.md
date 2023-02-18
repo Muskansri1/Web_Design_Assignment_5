@@ -1,8 +1,18 @@
 # Let's Talk Games
 
+
+## Index
+
+- [Team Members](#TeamMembers)
+- [Project Description](#ProjectDescription)
+- [Screenshots](#Screenshots)
+- [Usage](#usage)
+- [FileStructure](#file-structure)
+- [Guidelines]
+- [Credit/Acknowledgement]
 -----------------------------------------------------------------------------------------------------------------
 
-## Team Members
+## TeamMembers
 
 1. Muskan Srivastava    (srivastava.mu@northeastern.edu)
 2. Richa    ()
