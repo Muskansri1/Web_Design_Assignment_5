@@ -14,8 +14,8 @@
 1. Muskan Srivastava    (srivastava.mu@northeastern.edu)
 2. Richa    ()
 3. Riddhi     ()
-4. Shreya ()
-5. Krishna ()
+4. Shreya Sisodiya(sisodiya.s@northeastern.edu)
+5. Krishnna Sarrdah(sarrdah.k@northeastern.edu)
 
 -----------------------------------------------------------------------------------------------------------------
 
